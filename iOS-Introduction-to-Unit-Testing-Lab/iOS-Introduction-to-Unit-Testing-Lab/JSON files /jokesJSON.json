@@ -1,0 +1,62 @@
+[
+    {
+        "id": 24,
+        "type": "programming",
+        "setup": "A SQL query walks into a bar, walks up to two tables and asks...",
+        "punchline": "'Can I join you?'"
+    },
+    {
+        "id": 73,
+        "type": "programming",
+        "setup": "The punchline often arrives before the set-up.",
+        "punchline": "Do you know the problem with UDP jokes?"
+    },
+    {
+        "id": 29,
+        "type": "programming",
+        "setup": "There are 10 types of people in this world...",
+        "punchline": "Those who understand binary and those who don't"
+    },
+    {
+        "id": 23,
+        "type": "programming",
+        "setup": "Why do programmers always mix up Halloween and Christmas?",
+        "punchline": "Because Oct 31 == Dec 25"
+    },
+    {
+        "id": 33,
+        "type": "programming",
+        "setup": "Which song would an exception sing?",
+        "punchline": "Can't catch me - Avicii"
+    },
+    {
+        "id": 18,
+        "type": "programming",
+        "setup": "Why did the programmer quit his job?",
+        "punchline": "Because he didn't get arrays."
+    },
+    {
+        "id": 17,
+        "type": "programming",
+        "setup": "Where do programmers like to hangout?",
+        "punchline": "The Foo Bar."
+    },
+    {
+        "id": 28,
+        "type": "programming",
+        "setup": "To understand what recursion is...",
+        "punchline": "You must first understand what recursion is"
+    },
+    {
+        "id": 72,
+        "type": "programming",
+        "setup": "I was gonna tell you a joke about UDP...",
+        "punchline": "...but you might not get it."
+    },
+    {
+        "id": 26,
+        "type": "programming",
+        "setup": "If you put a million monkeys at a million keyboards, one of them will eventually write a Java program",
+        "punchline": "the rest of them will write Perl"
+    }
+]
