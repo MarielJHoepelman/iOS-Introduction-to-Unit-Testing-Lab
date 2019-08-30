@@ -17,6 +17,7 @@
 		58247BCB2318724E003E2E12 /* jokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BC823186FEE003E2E12 /* jokesModel.swift */; };
 		58247BCD231878FA003E2E12 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BCC231878FA003E2E12 /* JokesViewController.swift */; };
 		58247BCF2318B7DD003E2E12 /* JokesDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BCE2318B7DD003E2E12 /* JokesDetailedViewController.swift */; };
+		58247BD123196755003E2E12 /* StarWarsJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 58247BD023196755003E2E12 /* StarWarsJSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		58247BC823186FEE003E2E12 /* jokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jokesModel.swift; sourceTree = "<group>"; };
 		58247BCC231878FA003E2E12 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
 		58247BCE2318B7DD003E2E12 /* JokesDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesDetailedViewController.swift; sourceTree = "<group>"; };
+		58247BD023196755003E2E12 /* StarWarsJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StarWarsJSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				58247BC423186DDC003E2E12 /* jokesJSON.json */,
+				58247BD023196755003E2E12 /* StarWarsJSON.json */,
 			);
 			path = "JSON files ";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58247BC523186DDC003E2E12 /* jokesJSON.json in Resources */,
+				58247BD123196755003E2E12 /* StarWarsJSON.json in Resources */,
 				58247BAB23186C4E003E2E12 /* LaunchScreen.storyboard in Resources */,
 				58247BA823186C4E003E2E12 /* Assets.xcassets in Resources */,
 				58247BA623186C4D003E2E12 /* Main.storyboard in Resources */,
