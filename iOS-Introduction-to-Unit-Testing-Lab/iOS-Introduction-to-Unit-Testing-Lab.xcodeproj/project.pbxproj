@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		58247BA123186C4D003E2E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BA023186C4D003E2E12 /* AppDelegate.swift */; };
-		58247BA323186C4D003E2E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BA223186C4D003E2E12 /* ViewController.swift */; };
 		58247BA623186C4D003E2E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58247BA423186C4D003E2E12 /* Main.storyboard */; };
 		58247BA823186C4E003E2E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58247BA723186C4E003E2E12 /* Assets.xcassets */; };
 		58247BAB23186C4E003E2E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58247BA923186C4E003E2E12 /* LaunchScreen.storyboard */; };
 		58247BB623186C4E003E2E12 /* iOS_Introduction_to_Unit_Testing_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BB523186C4E003E2E12 /* iOS_Introduction_to_Unit_Testing_LabTests.swift */; };
 		58247BC523186DDC003E2E12 /* jokesJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 58247BC423186DDC003E2E12 /* jokesJSON.json */; };
+		58247BC923186FEE003E2E12 /* jokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BC823186FEE003E2E12 /* jokesModel.swift */; };
+		58247BCB2318724E003E2E12 /* jokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BC823186FEE003E2E12 /* jokesModel.swift */; };
+		58247BCD231878FA003E2E12 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BCC231878FA003E2E12 /* JokesViewController.swift */; };
+		58247BCF2318B7DD003E2E12 /* JokesDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58247BCE2318B7DD003E2E12 /* JokesDetailedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +32,6 @@
 /* Begin PBXFileReference section */
 		58247B9D23186C4D003E2E12 /* iOS-Introduction-to-Unit-Testing-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Introduction-to-Unit-Testing-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58247BA023186C4D003E2E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58247BA223186C4D003E2E12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58247BA523186C4D003E2E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58247BA723186C4E003E2E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58247BAA23186C4E003E2E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,9 @@
 		58247BB523186C4E003E2E12 /* iOS_Introduction_to_Unit_Testing_LabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Introduction_to_Unit_Testing_LabTests.swift; sourceTree = "<group>"; };
 		58247BB723186C4E003E2E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58247BC423186DDC003E2E12 /* jokesJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jokesJSON.json; sourceTree = "<group>"; };
+		58247BC823186FEE003E2E12 /* jokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jokesModel.swift; sourceTree = "<group>"; };
+		58247BCC231878FA003E2E12 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
+		58247BCE2318B7DD003E2E12 /* JokesDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesDetailedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 				58247BA023186C4D003E2E12 /* AppDelegate.swift */,
 				58247BC623186DFA003E2E12 /* JSON files  */,
 				58247BC023186D53003E2E12 /* Controller */,
+				58247BCA23186FFC003E2E12 /* Model */,
 				58247BC123186D6C003E2E12 /* View */,
 				58247BA723186C4E003E2E12 /* Assets.xcassets */,
 				58247BA923186C4E003E2E12 /* LaunchScreen.storyboard */,
@@ -102,7 +108,8 @@
 		58247BC023186D53003E2E12 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				58247BA223186C4D003E2E12 /* ViewController.swift */,
+				58247BCE2318B7DD003E2E12 /* JokesDetailedViewController.swift */,
+				58247BCC231878FA003E2E12 /* JokesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +128,14 @@
 				58247BC423186DDC003E2E12 /* jokesJSON.json */,
 			);
 			path = "JSON files ";
+			sourceTree = "<group>";
+		};
+		58247BCA23186FFC003E2E12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58247BC823186FEE003E2E12 /* jokesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,8 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58247BA323186C4D003E2E12 /* ViewController.swift in Sources */,
+				58247BCB2318724E003E2E12 /* jokesModel.swift in Sources */,
+				58247BCF2318B7DD003E2E12 /* JokesDetailedViewController.swift in Sources */,
 				58247BA123186C4D003E2E12 /* AppDelegate.swift in Sources */,
+				58247BCD231878FA003E2E12 /* JokesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58247BC923186FEE003E2E12 /* jokesModel.swift in Sources */,
 				58247BB623186C4E003E2E12 /* iOS_Introduction_to_Unit_Testing_LabTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

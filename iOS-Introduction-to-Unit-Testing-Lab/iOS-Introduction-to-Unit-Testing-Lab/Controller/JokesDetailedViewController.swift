@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  JokesDetailedViewController.swift
 //  iOS-Introduction-to-Unit-Testing-Lab
 //
 //  Created by Mariel Hoepelman on 8/29/19.
@@ -8,14 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class JokesDetailedViewController: UIViewController {
+    
+    var joke: Jokes!
+    
+    @IBOutlet weak var punchlineLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        punchlineLabel.text = joke.punchline
     }
 
-
 }
-
-

@@ -18,17 +18,28 @@ class iOS_Introduction_to_Unit_Testing_LabTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    private func getDataFromJSON() -> Data {
+        guard let pathToData = Bundle.main.path(forResource: "jokesJSON", ofType: "json") else {fatalError("couldn't get data fron JSON file called sampleData.json")}
+        let url = URL(fileURLWithPath: pathToData)
+        do {
+            let data = try Data(contentsOf: url)
+            return data
+        } catch let jsonError {
+            //in case we cant get data
+            fatalError("couldn't get data fron JSON file: \(jsonError)")
         }
     }
-
+    
+    func testGetDataFromJSON() {
+        let data = getDataFromJSON()
+        let jokes = Jokes.getJoke(from: data)
+        XCTAssert(jokes != nil, "Found nil")
+    }
+    
+    func testJSONHasFourProperties() {
+        let data = getDataFromJSON()
+        let jokes = Jokes.getJoke(from: data)
+        XCTAssert(jokes?.count == 10, "Error")
+    }
 }
