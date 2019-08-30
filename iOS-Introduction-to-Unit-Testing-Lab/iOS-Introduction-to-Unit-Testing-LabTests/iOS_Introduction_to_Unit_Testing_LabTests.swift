@@ -42,4 +42,29 @@ class iOS_Introduction_to_Unit_Testing_LabTests: XCTestCase {
         let jokes = Jokes.getJoke(from: data)
         XCTAssert(jokes?.count == 10, "Error")
     }
+    
+    private func getMovieDataFromJSON() -> Data {
+        guard let pathToData = Bundle.main.path(forResource: "StarWarsJSON", ofType: "json") else {fatalError("couldn't get movie data fron JSON file called starWarJSON.json")}
+        let url = URL(fileURLWithPath: pathToData)
+        do {
+            let data = try Data(contentsOf: url)
+            return data
+        } catch let jsonError {
+            //in case we cant get data
+            fatalError("couldn't get data fron JSON file: \(jsonError)")
+        }
+    }
+    
+    func testGetMovieFromJSON() {
+        let data = getMovieDataFromJSON()
+        let movies = ResultsWrapper.getMovies(from: data)
+        XCTAssert(movies != nil, "Found nil in movie JSON")
+    }
+    
+    func testMovieJSONHasFourObjects() {
+        let data = getMovieDataFromJSON()
+        let movies = ResultsWrapper.getMovies(from: data)
+        XCTAssert(movies?.results.count == 7, "Error")
+    }
+    
 }
