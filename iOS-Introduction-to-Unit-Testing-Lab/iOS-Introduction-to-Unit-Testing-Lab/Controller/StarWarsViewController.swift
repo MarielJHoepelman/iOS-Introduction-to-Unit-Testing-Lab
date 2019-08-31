@@ -10,7 +10,7 @@ import UIKit
 
 class StarWarsViewController: UIViewController {
     
-    var movie: ResultsWrapper!
+    var movies: ResultsWrapper!
 
     @IBOutlet weak var movieTableView: UITableView!
     
@@ -26,18 +26,26 @@ class StarWarsViewController: UIViewController {
             fatalError("Coudn't find star wars json file")
         }
         print(pathToJSONFile)
-        //its a reference to the actual location  of the json file
+        
         let url = URL(fileURLWithPath: pathToJSONFile)
         do {
-            //turn contents of file into usabel data
             let data = try
-                //decode data to create
                 Data(contentsOf: url)
-            let moviesFromJSON = try ResultsWrapper.getMovies(from: data)
-            movie = moviesFromJSON!
+            
+            let moviesFromJSON = try
+                ResultsWrapper.getMovies(from: data)
+                movies = moviesFromJSON!
         } catch {
             print(error)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let movieDVC = segue.destination as? StarWarsDetailedViewController else {fatalError("Destination not found")}
+        
+        guard let selectedIndexPath = movieTableView.indexPathForSelectedRow else {fatalError()}
+        
+        movieDVC.movieSelected = movies?.results[selectedIndexPath.row]
     }
 }
 
@@ -52,7 +60,7 @@ extension StarWarsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = movieTableView.dequeueReusableCell(withIdentifier: "movieCell")
-        cell?.textLabel?.text = movie?.results[indexPath.row].title
+        cell?.textLabel?.text = movies?.results[indexPath.row].title
         cell?.textLabel?.numberOfLines = 0
         return cell!
     }

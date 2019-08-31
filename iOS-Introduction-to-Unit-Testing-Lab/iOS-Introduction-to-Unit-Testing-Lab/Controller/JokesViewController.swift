@@ -30,11 +30,11 @@ class JokesViewController: UIViewController {
         //its a reference to the actual location  of the json file
         let url = URL(fileURLWithPath: pathToJSONFile)
         do {
-            //turn contents of file into usabel data
             let data = try
-                //decode data to create
+
                 Data(contentsOf: url)
-            let jokesFromJSON = try Jokes.getJoke(from: data)
+            let jokesFromJSON = try
+                Jokes.getJoke(from: data)
             jokes = jokesFromJSON!
         } catch {
             print(error)
